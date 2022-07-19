@@ -1,1 +1,6 @@
 ipykernel==6.15.1
+pandas
+seaborn
+matplotlib
+pandas_profiling
+ipywidgets
