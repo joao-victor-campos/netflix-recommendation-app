@@ -5,3 +5,4 @@ matplotlib
 pandas_profiling
 ipywidgets
 plotly
+sklearn
