@@ -19,4 +19,4 @@ if __name__ == "__main__":
     print(x.df)
     # ran on a sample as an example
     mdl = Model(x.df)
-    print(mdl.recommend(movie_id=0, n_rec=1))
+    print(mdl.recommend(movie_id=0, n_rec=2))
