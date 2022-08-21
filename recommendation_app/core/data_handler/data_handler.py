@@ -14,7 +14,7 @@ class DataHandler:
 
         Args:
             df (pd.DataFrame): DataFrame to normalize the columns.
-            features (List): List of DataFrame name column names.
+            features (List): List of DataFrame column names.
 
         Returns:
             pd.DataFrame: DataFrame with normalized columns.

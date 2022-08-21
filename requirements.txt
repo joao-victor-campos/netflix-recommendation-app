@@ -6,3 +6,5 @@ pandas_profiling
 ipywidgets
 plotly
 sklearn
+numpy
+jupyter
