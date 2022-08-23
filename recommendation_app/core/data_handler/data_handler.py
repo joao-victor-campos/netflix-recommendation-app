@@ -1,5 +1,6 @@
 from typing import List
 
+import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 
@@ -32,9 +33,10 @@ class DataHandler:
         Returns:
             pd.DataFrame: DataFrame with one hot encoded columns.
         """
-        for feature in features:
-            ohe_df = pd.get_dummies(self.df[feature])
+        for i in features:
+            ohe_df = pd.get_dummies(self.df[i])
+            print(ohe_df)
             ohe_df.reset_index(drop=True, inplace=True)
             self.df = pd.concat([self.df, ohe_df], axis=1)
-            self.df.drop(columns=feature, inplace=True)
+            self.df.drop(columns=i, inplace=True)
         return self.df

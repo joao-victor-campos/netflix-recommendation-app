@@ -1,5 +1,6 @@
 from array import array
 
+import numpy as np
 import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 
@@ -17,6 +18,7 @@ class Model:
             array: Returns the cosine similarity between chosen_movie and sim_array.
         """
         chosen_movie = chosen_movie.reshape(1, -1)
+        # sim_movies = sim_movies.reshape(-1, 6)
         return cosine_similarity(chosen_movie, sim_movies, dense_output=True)
 
     def recommend(self, movie_id: str, n_rec: int) -> pd.DataFrame:
@@ -28,9 +30,15 @@ class Model:
             pd.DataFrame: Dataframe with the n_rec recommendations.
         """
         movie_info = self.df.loc[movie_id].values
-        sim_array = self.movie_similarity(movie_info, self.df.values)
+        x = self.movie_similarity(movie_info, self.df.values)
 
-        sim_list = sim_array.tolist()[0]
-        self.df["similarity"] = sim_list
+        # x.reshape(1, -1)
+        y = x.tolist()[0]
+        print(y)
+        self.df["similarity"] = y
+        print(self.df)
+        # movie_info = self.df.loc[movie_id].values
+        # self.df['similarity'] = self.df.apply(self.movie_similarity(movie_info,
+        # self.df.values)))
 
         return self.df.nlargest(columns="similarity", n=n_rec + 1)
