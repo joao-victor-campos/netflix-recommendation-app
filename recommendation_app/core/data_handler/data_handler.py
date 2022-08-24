@@ -5,7 +5,14 @@ from sklearn import preprocessing
 
 
 class DataHandler:
+    """Feature Engineers the dataframe."""
+
     def __init__(self, df: pd.DataFrame) -> None:
+        """__init__ method.
+
+        Args:
+            df (pd.DataFrame): pd.DataFrame.
+        """
         self.df = df
 
     def normalize(self, features: List) -> pd.DataFrame:
