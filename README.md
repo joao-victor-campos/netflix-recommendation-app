@@ -23,7 +23,7 @@ cd netflix-recommendation-app
 
 ### Huggingface:
 
-If you want to use the application, go to our :huggs: [Huggingface Repository](https://huggingface.co/spaces/joao-victor-campos/netflix-recommensation-model) 
+If you want to use the application, go to our :laughing: [Huggingface Repository](https://huggingface.co/spaces/joao-victor-campos/netflix-recommensation-model) 
 
 
 ## Development
