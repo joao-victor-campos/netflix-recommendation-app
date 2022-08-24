@@ -8,7 +8,8 @@ df_recommendation = pd.read_csv(PATH)
 movie_names = df_recommendation["title"].tolist()
 
 
-def gradio(movie_name, n_rec):
+def gradio(movie_name: str, n_rec: int) -> pd.DataFrame:
+
     if __name__ == "__main__":
         features = [
             "type",
